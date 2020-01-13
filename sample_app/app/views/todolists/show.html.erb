@@ -1,4 +1,8 @@
+<h1>詳細画面</h1>
 <h2>タイトル</h2>
  <p><%= @list.title %></p>
  <h2>本文</h2>
  <p><%= @list.body %></p>
+<h2>画像</h2>
+
+ <%= link_to "編集", edit_todolist_path(@list.id) %>
