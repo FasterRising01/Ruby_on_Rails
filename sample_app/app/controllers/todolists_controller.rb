@@ -32,6 +32,12 @@ def update
 	redirect_to todolist_path(list.id)
 end
 
+def destroy
+	list = List.find(params[:id])#リストからデータ(レコード)を1件取得
+	list.destroy #取得したidのデータ(レコード)を削除
+	redirect_to todolists_path #List一覧にリダイレクト
+end
+
   private#ストロングパラメータ[private]はコントローラーファイルの1番下
          #のendの上に置く
 
